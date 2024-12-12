@@ -26,7 +26,7 @@ The **Active Directory Threat Dashboard** is an interactive tool designed to hel
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/AD-Threat-Dashboard.git
+   git clone https://github.com/ToOKaiHack/AD-Threat-Dashboard.git
    cd AD-Threat-Dashboard
    ```
 
