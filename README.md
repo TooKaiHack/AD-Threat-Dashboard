@@ -35,7 +35,7 @@ The **Active Directory Threat Dashboard** is an interactive tool designed to hel
    pip install -r requirements.txt
    ```
 
-3. Ensure the `data/` directory contains your log file (e.g., `AD_logs_complete_fictif.csv`).
+3. Ensure the `data/` directory contains your log file (e.g., `AD_logs.csv`).
 
 4. Run the application:
    ```bash
