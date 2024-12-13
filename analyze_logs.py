@@ -70,3 +70,27 @@ user_event_counts.to_csv('./data/user_event_counts.csv', index=False)
 events_by_date.to_csv('./data/events_by_date.csv', index=False)
 
 print("\nAnalysis completed. Charts and results have been saved in the 'data' folder.")
+
+from sklearn.linear_model import LinearRegression  # Ajout des imports nécessaires
+import numpy as np
+
+# Ajoutez le code pour les prédictions ici
+X = np.array(range(len(events_by_date['Date']))).reshape(-1, 1)
+y = events_by_date['Counts']
+
+model = LinearRegression().fit(X, y)
+
+future_dates = np.array(range(len(X) + 10)).reshape(-1, 1)
+predictions = model.predict(future_dates)
+
+fig = px.line(events_by_date, x='Date', y='Counts', title='Event Trends with Predictions')
+fig.add_scatter(x=future_dates.flatten(), y=predictions, mode='lines', name='Predicted')
+
+# Ajouter une colonne pour la date
+critical_events['Date'] = pd.to_datetime(critical_events['TimeCreated']).dt.date
+
+# Regrouper les événements par utilisateur et date
+event_batches = critical_events.groupby(['User', 'Date']).size().reset_index(name='BatchSize')
+
+# Sauvegarder les lots dans un nouveau fichier CSV
+event_batches.to_csv('data/event_batches.csv', index=False)

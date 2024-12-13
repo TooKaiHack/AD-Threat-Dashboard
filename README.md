@@ -1,121 +1,98 @@
 # Active Directory Threat Dashboard
 
-## Overview
+## Description
 
-The **Active Directory Threat Dashboard** is an interactive tool designed to help analyze and visualize critical events logged in Active Directory environments. It allows users to gain insights into potential security threats, monitor activity, and identify anomalies.
-
----
+The **Active Directory Threat Dashboard** is a web-based application designed to analyze and visualize critical events from Active Directory logs. It provides insights into event patterns, user activity, and potential security threats using interactive charts and tables.
 
 ## Features
 
-- Visualize critical events by type (Event ID).
-- Identify user activity patterns.
-- Monitor trends in events over time.
-- Analyze logs for potential security incidents or misconfigurations.
+- **Event Analysis by Event ID**: Visualize the number of critical events by their unique IDs, such as account creation, password changes, and group modifications.
+- **User Activity Monitoring**: Identify users with the most critical activities.
+- **Time-Based Trends**: Track the occurrence of critical events over time.
+- **Detailed Logs by User**: View detailed logs for a specific user, including timestamps, event descriptions, and event details.
 
----
+## Event ID Descriptions
+
+The dashboard currently supports the following critical events:
+
+| Event ID | Description                     |
+|----------|---------------------------------|
+| 4720     | User Account Created           |
+| 4732     | Security Group Member Added    |
+| 4723     | Password Change Attempt        |
+
+## Technologies Used
+
+- **Dash**: Web framework for building interactive dashboards.
+- **Plotly**: For creating dynamic and interactive charts.
+- **Pandas**: Data manipulation and analysis.
+- **Flask**: Backend server for serving the application.
 
 ## Installation
 
 ### Prerequisites
 
-1. **Python 3.8+**: Ensure Python is installed on your machine. [Download Python](https://www.python.org/)
-2. **Pip**: Ensure you have `pip`, Python's package manager, installed.
+1. Python 3.7 or later.
+2. Required Python libraries:
+   - `dash`
+   - `plotly`
+   - `pandas`
+   - `flask`
 
-### Setup Instructions
+Install dependencies with:
+```bash
+pip install -r requirements.txt
+```
+
+### Steps
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/ToOKaiHack/AD-Threat-Dashboard.git
+   ```
+2. Navigate to the project directory:
+   ```bash
    cd AD-Threat-Dashboard
    ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Ensure the `data/` directory contains your log file (e.g., `AD_logs.csv`).
-
-4. Run the application:
+3. Run the application:
    ```bash
    python app.py
    ```
-
-5. Open your browser and visit:
+4. Open your browser and navigate to:
    ```
    http://127.0.0.1:8050
    ```
 
----
-
-## File Structure
+## Project Structure
 
 ```
 AD-Threat-Dashboard/
-├── app.py                 # Main script for running the dashboard
-├── analyze_logs.py        # Script for analyzing logs
-├── data/                  # Directory for storing log files and outputs
-│   ├── AD_logs.csv  # Example log file
-│   ├── event_counts.csv            # Processed event data
-│   ├── user_event_counts.csv       # Processed user data
-│   ├── events_by_date.csv          # Temporal analysis
-│   ├── event_counts.png            # Event count chart
-│   ├── user_event_counts.png       # User event chart
-│   ├── events_by_date.png          # Temporal trends chart
-├── README.md              # Documentation of the project
-├── requirements.txt       # Dependencies for the project
+├── app.py                 # Main application script
+├── data/                  # Directory containing input data
+│   └── AD_logs.csv        # Example log file
+├── requirements.txt       # Python dependencies
+├── README.md              # Project documentation
+└── .gitignore             # Git ignore file
 ```
-
----
 
 ## Usage
 
-### Dashboard Sections
+1. Upload your Active Directory logs to the `data/AD_logs.csv` file.
+2. Launch the application and explore the insights through:
+   - Event ID charts.
+   - User activity visualizations.
+   - Time-series analysis.
+   - Detailed logs for individual users.
 
-1. **Number of Critical Events by Event ID**:
-   - Displays the frequency of critical events by type (e.g., account creation, group additions).
+## Contributions
 
-2. **Number of Critical Events by User**:
-   - Shows which users generated the most critical events.
-
-3. **Number of Critical Events Over Time**:
-   - Plots the frequency of events by date to identify spikes or unusual activity.
-
-### Example Logs
-
-- Event IDs analyzed:
-  - **4720**: User account creation.
-  - **4732**: User added to a group.
-  - **4723**: Failed password change attempt.
-
----
-
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
- ```bash
-   git commit -m "Description of changes"
-```
-4. Push to your fork and submit a pull request.
-
----
+Contributions are welcome! Feel free to fork this repository and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+## Author
 
-## Contact
-
-For questions or suggestions, feel free to contact me:
-
-- GitHub: [ToOKaiHack](https://github.com/TooKaiHack)
+- **ToOKaiHack**  
+  Passionate about cybersecurity and data analysis. Connect with me on [GitHub](https://github.com/ToOKaiHack).
