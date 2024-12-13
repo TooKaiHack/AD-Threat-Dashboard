@@ -103,16 +103,6 @@ http://127.0.0.1:8050
 - **User-Based Analysis**: Identify users performing sensitive actions.
 - **Time-Series Trends**: Monitor activity over specific time periods.
 
-### Screenshots
-
-#### Dashboard Overview
-![Dashboard Overview](https://via.placeholder.com/800x400)
-
-#### User Logs
-![User Logs](https://via.placeholder.com/800x400)
-
----
-
 ## 📊 How It Works
 
 1. **Log Extraction**:
