@@ -1,5 +1,7 @@
 # Active Directory Threat Dashboard
 
+![active-directory-monitoring-and-analysis-real](https://github.com/user-attachments/assets/97b3c7e1-478e-495d-990d-8a095275cd6e)
+
 ## Description
 
 The **Active Directory Threat Dashboard** is a web-based application designed to analyze and visualize critical events from Active Directory logs. It provides insights into event patterns, user activity, and potential security threats using interactive charts and tables.
