@@ -2,13 +2,13 @@
 
 ![active-directory-monitoring-and-analysis-real](https://github.com/user-attachments/assets/79aa8059-bb1e-4196-a9e6-d523374d9737)
 
-## 📖 Description
+## Description
 
 The **Active Directory Threat Dashboard** is a web-based application designed to analyze and visualize critical events from Active Directory logs. This project demonstrates how to identify and monitor sensitive actions within an Active Directory environment, such as user account creation, password changes, and group membership modifications. It is intended as an educational tool for labs and exercises in cybersecurity.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Event Analysis by Event ID**: Visualize the number of critical events by their unique IDs, including detailed descriptions.
 - **User Activity Monitoring**: Identify users involved in critical actions.
@@ -17,7 +17,7 @@ The **Active Directory Threat Dashboard** is a web-based application designed to
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Dash**: For building the interactive web dashboard.
 - **Plotly**: For creating dynamic, visually appealing charts.
@@ -27,7 +27,7 @@ The **Active Directory Threat Dashboard** is a web-based application designed to
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 1. Python 3.7 or later installed on your system.
 2. Active Directory environment or sample log files for testing.
@@ -49,7 +49,7 @@ flask==2.3.4
 
 ---
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 AD-Threat-Dashboard/
@@ -65,7 +65,7 @@ AD-Threat-Dashboard/
 
 ---
 
-## 📝 Event ID Descriptions
+## Event ID Descriptions
 
 | Event ID | Description                     |
 |----------|---------------------------------|
@@ -75,20 +75,20 @@ AD-Threat-Dashboard/
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/ToOKaiHack/AD-Threat-Dashboard.git
 cd AD-Threat-Dashboard
 ```
 
-### 2️⃣ Run the Application
+### Run the Application
 ```bash
 python app.py
 ```
 
-### 3️⃣ Open the Dashboard
+### Open the Dashboard
 Visit the following URL in your web browser:
 ```
 http://127.0.0.1:8050
@@ -96,14 +96,14 @@ http://127.0.0.1:8050
 
 ---
 
-## 🖼️ Application Overview
+## Application Overview
 
 ### **Key Features:**
 - **Event Breakdown by Type**: Analyze critical events such as user account creation, password changes, and group modifications.
 - **User-Based Analysis**: Identify users performing sensitive actions.
 - **Time-Series Trends**: Monitor activity over specific time periods.
 
-## 📊 How It Works
+## How It Works
 
 1. **Log Extraction**:
    - Use PowerShell scripts to extract Active Directory event logs.
